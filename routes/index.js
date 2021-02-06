@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var hbs = require('hbs')
+var formatDistanceToNow = require('date-fns/formatDistanceToNow')
 
 const messages = [
   {
@@ -14,9 +16,13 @@ const messages = [
   }
 ];
 
+hbs.registerHelper('format_date', function () {
+  return formatDistanceToNow(this.added, {addSuffix: true})
+})
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: "Mini Messageboard", messages: messages });
+  res.render('index', { title: "Mini Messageboard", messages: messages});
 });
 
 router.get("/new", function (req, res, next) {
