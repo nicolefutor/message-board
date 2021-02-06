@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<a href='/new'>New message</a>
+<ul>
+    {{#each messages}}
+    <li>
+        <div>
+            <p>{{this.user}} said:</p>
+            <h3>{{this.text}}</h3>
+            <small>{{this.added}}</small>
+        </div>
+    </li>
+    {{/each}}
+</ul>
