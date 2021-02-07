@@ -1,5 +1,5 @@
 # Mini Message Board
-The message boad display user-submitted messages. It was created for the [Odin Project](https://theodinproject.com)
+The message board displays user-submitted messages. It was created for the [Odin Project](https://theodinproject.com)
 ### Tech stack
 - Node.js
 - Express
